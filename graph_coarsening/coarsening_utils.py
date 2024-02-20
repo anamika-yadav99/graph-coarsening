@@ -571,7 +571,7 @@ def contract_variation_linear(G, A=None, K=10, r=0.5, mode="neighborhood"):
                 family.append(CandidateSet(triangle))
 
     family = SortedList(family)
-    marked = np.zeros(G.N, dtype=np.bool)
+    marked = np.zeros(G.N, dtype=np.bool_)
 
     # ----------------------------------------------------------------------------
     # Construct a (minimum weight) independent set.
@@ -932,7 +932,7 @@ def matching_greedy(G, weights, r=0.4):
     matching = []
 
     # which vertices have been selected
-    marked = np.zeros(N, dtype=np.bool)
+    marked = np.zeros(N, dtype=np.bool_)
 
     n, n_target = N, (1 - r) * N
     while len(candidate_edges) > 0:
